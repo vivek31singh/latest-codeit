@@ -10,6 +10,7 @@ import { useUser } from "@/lib/store/useUser";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import dynamic from "next/dynamic";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import stripAnsi from 'strip-ansi';
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import {
   ResizableHandle,
@@ -636,7 +637,7 @@ const Page = ({ params }: { params: Promise<{ slug: string[] }> }) => {
                     language={selectedLanguage}
                     style={dracula}
                   >
-                    {output}
+                    {output ? stripAnsi(output) : ''}
                   </SyntaxHighlighter>
                 )}
                 {error && (
@@ -644,7 +645,7 @@ const Page = ({ params }: { params: Promise<{ slug: string[] }> }) => {
                     language={selectedLanguage}
                     style={dracula}
                   >
-                    {error}
+                    {stripAnsi(error)}
                   </SyntaxHighlighter>
                 )}
               </div>

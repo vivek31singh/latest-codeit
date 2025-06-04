@@ -1,14 +1,5 @@
-def greet(name):
-    print("Hello, " + name + "!")
+def filter_even_numbers(numbers):
+    return [num for num in numbers if num % 2 == 0]
 
-age = 25
-
-if age >= 18:
-    print("You are an adult.")
-else:
-    print("You are a minor.")
-
-for i in range(1, 4):
-    print("Count:", i)
-
-greet("Charlie")
+result = filter_even_numbers([3, 6, 9, 12, 15, 18])
+print(result)  # Output: [6, 12, 18]
