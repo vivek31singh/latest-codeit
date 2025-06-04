@@ -171,8 +171,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <Link href="/">
-                <div className="flex aspect-square size-16 items-center justify-center bg-sidebar-primary text-sidebar-primary-foreground">
+              <Link href="/" className="cursor-pointer">
+                <div className="flex aspect-square size-16 border items-center justify-center bg-sidebar-primary text-sidebar-primary-foreground">
                   <Image src={terminalLogo} alt="" width={158} height={158} className="w-full object-cover object-center"/>
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">

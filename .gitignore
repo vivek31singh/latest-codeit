@@ -17,8 +17,13 @@
 /.next/
 /out/
 
+
+
 # production
 /build
+/code-runner/**/*.js
+/code-runner/**/*.ts
+/code-runner/**/*.py
 
 # misc
 .DS_Store

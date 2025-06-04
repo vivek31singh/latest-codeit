@@ -39,6 +39,7 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar();
   const router = useRouter();
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -51,13 +52,13 @@ export function NavUser({
               <Avatar className="h-8 w-8 rounded-lg">
                 <AvatarImage
                   src={
-                    user.avatar ||
+                    user?.avatar ? user?.avatar :
                     `https://placehold.co/600x400?text=${user?.name.charAt(0) || "U"
                     }`
                   }
-                  alt={user.name}
+                  alt={user?.name}
                 />
-                <AvatarFallback className="rounded-lg">U</AvatarFallback>
+                <AvatarFallback className="rounded-lg">{user?.name?.charAt(0) ?? "U"}</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">{user.name}</span>
@@ -83,7 +84,7 @@ export function NavUser({
                     }
                     alt={user.name}
                   />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-lg">{user?.name?.charAt(0) ?? "U"}</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">{user.name}</span>

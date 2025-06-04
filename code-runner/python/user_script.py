@@ -1,16 +1,14 @@
-# Python program to swap two variables
+def greet(name):
+    print("Hello, " + name + "!")
 
-x = 5
-y = 10
+age = 25
 
-# To take inputs from the user
-#x = input('Enter value of x: ')
-#y = input('Enter value of y: ')
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
 
-# create a temporary variable and swap the values
-temp = x
-x = y
-y = temp
+for i in range(1, 4):
+    print("Count:", i)
 
-print('The value of x after swapping: {}'.format(x))
-print('The value of y after swapping: {}'.format(y))
+greet("Charlie")

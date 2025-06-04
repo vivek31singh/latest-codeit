@@ -1,9 +1,17 @@
-interface User {
-    name: String
+function greet(name: string): void {
+    console.log("Hello, " + name + "!");
 }
 
-const user: User = {
-    name: "vivek"
+let age: number = 25;
+
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
 }
 
-console.log(user)
+for (let i = 1; i <= 3; i++) {
+    console.log("Count: " + i);
+}
+
+greet("Alice");
