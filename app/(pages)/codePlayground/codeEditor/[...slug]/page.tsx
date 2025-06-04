@@ -461,7 +461,7 @@ const Page = ({ params }: { params: Promise<{ slug: string[] }> }) => {
                   ),
                 });
               } catch (err) {
-                throw new Error("Error occurred while copying Room ID");
+                throw new Error(`Error occurred while copying Room ID, ${err}`);
               }
             }}
 
@@ -576,7 +576,7 @@ const Page = ({ params }: { params: Promise<{ slug: string[] }> }) => {
                         </li>
                       ))
                     ) : (
-                      <h1>show that no users have joined</h1>
+                      <h1>No members</h1>
                     )}
                   </ul>
                 </>

@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase/supabaseClient";
-import axios from "axios";
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -9,7 +8,8 @@ export async function GET(request: Request) {
   const next = searchParams.get("next") ?? "/";
 
   // Exchange the auth code for a session
-  const { data, error } = await supabase.auth.exchangeCodeForSession(code ?? "");
+  // const { data, error } =
+   await supabase.auth.exchangeCodeForSession(code ?? "");
 
   // Get authenticated user
   // const user = data.session?.user;

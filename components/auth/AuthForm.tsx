@@ -112,7 +112,7 @@ export default function AuthForm({ purpose }: AuthFormProps) {
           break;
 
         case "Log in":
-          const { data: loginData, error: loginError } = await signUpNewUser({
+          const { data: loginData, error: loginError } = await signInWithEmail({
             email: userData.email,
             password: userData.password,
             redirectTo: "/",
